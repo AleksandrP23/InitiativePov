@@ -15,13 +15,15 @@
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body class="page__body">
   <div class="site-container">
-    <header class="header">
+    <header class="header d-n">
   <div class="container header__container">
-    <img loading="lazy" src="./img/logo.svg" class="logo__image" width="152" height="69" alt="Логотип Инициатива Поволжье">
+    <img loading="lazy" src="./img/logo.svg" class="logo__image" width="152" height="69"
+      alt="Логотип Инициатива Поволжье">
     <nav class="nav">
       <ul class="list-reset nav__list">
         <li class="nav__item"><a href="#manual" class="nav__link">Ручные системы пожаротушения</a></li>
@@ -32,16 +34,28 @@
     <div class="header__contacts">
       <a href="mailto:info@sf-nn.ru" class="header__mail">info@sf-nn.ru</a>
       <a href="tel:+78312157060" class="header__tel">+7 (83-12) 15-70-60</a>
-      <ul class="list-reset social header__social">
-        <li class="header__social-item"><a href="#" target="_blank" class="header__social-link header__social-link--tg" aria-label="Наша страничка в Фейсбуке"></a></li>
-        <li class="header__social-item"><a href="#" target="_blank" class="header__social-link header__social-link--whatsapp" aria-label="Наша страничка во Вконтакте"></a></li>
-        <li class="header__social-item"><a href="#" target="_blank" class="header__social-link header__social-link--viber" aria-label="Наша страничка в Твиттере"></a></li>
+      <ul class="list-reset header__social">
+        <li class="header__social-item">
+          <a href="#" target="_blank" class="header__social-link header__social-link--tg">
+            <img loading="lazy" src="./img/contacts-telegramm.svg" class="image" width="9.5" height="8.5" alt="Телеграмм">
+          </a>
+        </li>
+        <li class="header__social-item">
+          <a href="#" target="_blank" class="header__social-link header__social-link--wa">
+            <img loading="lazy" src="./img/contacts-watsapp.svg" class="image" width="10" height="10" alt="Whatsapp">
+          </a>
+        </li>
+        <li class="header__social-item">
+          <a href="#" target="_blank" class="header__social-link header__social-link--vb">
+            <img loading="lazy" src="./img/contacts-viber.svg" class="image" width="10" height="11" alt="Viber">
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 </header>
 
-    <section class="hero">
+    <section class="hero ">
   <div class="container hero__container">
     <div class="hero__wrapper">
       <h1 class="hero__title">Инновационные системы пожаротушения</h1>
@@ -57,29 +71,54 @@
       <div class="compare__left">
         <ul class="list-reset compare__list">
           <h3 class="compare__list-title">ОУ-5</h3>
-          <li class="compare__item">масса устройства: <span class="compare__item--bold">16 кг</span></li>
-          <li class="compare__item">классы тушения пожаров: <span class="compare__item--bold">В, С, Е</span></li>
-          <li class="compare__item">продолжительность подачи ОТВ: <span class="compare__item--bold">8 сек</span></li>
-          <li class="compare__item">напряжение электроустановок: <span class="compare__item--bold">до 10 кВ</span></li>
-          <li class="compare__item">диапазон рабочих температур: <span class="compare__item--bold">-40<sup>о</sup> до +50<sup>о</sup></span>
+          <li class="compare__item">
+            <span class="compare__item-name">масса устройства:</span><span class="compare__item--bold">16 кг</span></li>
+          <li class="compare__item">
+            <span class="compare__item-name">классы тушения пожаров: </span> <span class="compare__item--bold">В, С,
+              Е</span></li>
+          <li class="compare__item">
+            <span class="compare__item-name">продолжительность подачи ОТВ:</span> <span class="compare__item--bold">8
+              сек</span></li>
+          <li class="compare__item">
+            <span class="compare__item-name">напряжение электроустановок:</span><span class="compare__item--bold">до 10
+              кВ</span></li>
+          <li class="compare__item">
+            <span class="compare__item-name">диапазон рабочих температур: </span> <span
+              class="compare__item--bold">-40<sup>о</sup> до +50<sup>о</sup></span>
           </li>
-          <li class="compare__item">срок службы: <span class="compare__item--bold">10 лет</span></li>
-          <li class="compare__item">проверка ОТВ: <span class="compare__item--bold">раз в год</span></li>
-          <li class="compare__item">частота перезарядки: <span class="compare__item--bold">раз в 5 лет</span></li>
+          <li class="compare__item">
+            <span class="compare__item-name">срок службы: </span> <span class="compare__item--bold">10 лет</span></li>
+          <li class="compare__item">
+            <span class="compare__item-name"> проверка ОТВ: </span><span class="compare__item--bold">раз в год</span>
+          </li>
+          <li class="compare__item">
+            <span class="compare__item-name">частота перезарядки: </span> <span class="compare__item--bold">раз в 5
+              лет</span></li>
         </ul>
       </div>
       <div class="compare__right">
         <ul class="list-reset compare__list">
           <h3 class="compare__list-title">РАФ 100E</h3>
-          <li class="compare__item">масса устройства: <span class="compare__item--bold">0,35 кг</span></li>
-          <li class="compare__item">классы тушения пожаров: <span class="compare__item--bold">А (2), В, С, Е</span></li>
-          <li class="compare__item">продолжительность подачи ОТВ: <span class="compare__item--bold">57 сек</span></li>
-          <li class="compare__item">напряжение электроустановок: <span class="compare__item--bold">до 38 кВ</span></li>
-          <li class="compare__item">диапазон рабочих температур: <span class="compare__item--bold">-60<sup>о</sup> до +60<sup>о</sup></span>
+          <li class="compare__item">
+            <span class="compare__item-name"> масса устройства: </span>
+            <span class="compare__item--bold">0,35 кг</span></li>
+          <li class="compare__item">
+            <span class="compare__item-name">классы тушения пожаров: </span> <span class="compare__item--bold">А (2), В,
+              С, Е</span></li>
+          <li class="compare__item"><span class="compare__item-name">продолжительность подачи ОТВ:</span> <span
+              class="compare__item--bold">57 сек</span></li>
+          <li class="compare__item"><span class="compare__item-name">напряжение электроустановок:</span><span
+              class="compare__item--bold">до 38 кВ</span></li>
+          <li class="compare__item"><span class="compare__item-name">диапазон рабочих температур: </span><span
+              class="compare__item--bold">-60<sup>о</sup>
+              до +60<sup>о</sup></span>
           </li>
-          <li class="compare__item">срок службы: <span class="compare__item--bold">10 лет</span></li>
-          <li class="compare__item">проверка ОТВ: <span class="compare__item--bold">не требуется</span></li>
-          <li class="compare__item">частота перезарядки: <span class="compare__item--bold">не требуется</span></li>
+          <li class="compare__item"><span class="compare__item-name">срок службы: </span><span
+              class="compare__item--bold">10 лет</span></li>
+          <li class="compare__item"><span class="compare__item-name"> проверка ОТВ: </span><span
+              class="compare__item--bold">не требуется</span></li>
+          <li class="compare__item"><span class="compare__item-name">частота перезарядки: </span><span
+              class="compare__item--bold">не требуется</span></li>
         </ul>
       </div>
     </div>
@@ -126,7 +165,7 @@
 </section>
 
     <section class="catalog">
-  <div class="container">
+  <div class="container catalog__container">
     <h2 class="catalog__title">Каталог</h2>
     <div class="catalog-card">
       <h3 class="catalog-card__title"><span class="catalog-card__title-decore">Ручные системы пожаротушения</span></h3>
@@ -136,8 +175,8 @@
           <picture>
             <source srcset="./img/catalog-manual.avif" type="image/avif">
             <source srcset="./img/catalog-manual.webp" type="image/webp">
-            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366"
-              height="339" alt="Картинка">
+            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
+              alt="Картинка">
           </picture>
           <div class="catalog-card__item-descr">
             <span class="catalog-card__item-sum">160 000 ₽</span>
@@ -152,8 +191,8 @@
           <picture>
             <source srcset="./img/catalog-manual.avif" type="image/avif">
             <source srcset="./img/catalog-manual.webp" type="image/webp">
-            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366"
-              height="339" alt="Картинка">
+            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
+              alt="Картинка">
           </picture>
           <div class="catalog-card__item-descr">
             <span class="catalog-card__item-sum">160 000 ₽</span>
@@ -168,8 +207,8 @@
           <picture>
             <source srcset="./img/catalog-manual.avif" type="image/avif">
             <source srcset="./img/catalog-manual.webp" type="image/webp">
-            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366"
-              height="339" alt="Картинка">
+            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
+              alt="Картинка">
           </picture>
           <div class="catalog-card__item-descr">
             <span class="catalog-card__item-sum">160 000 ₽</span>
@@ -181,15 +220,16 @@
         </li>
         <button class="btn-reset catalog-card__btn">развернуть еще</button>
       </ul>
-      <h3 class="catalog-card__title"><span class="catalog-card__title-decore">Автономные установки пожаротушения</span></h3>
+      <h3 class="catalog-card__title"><span class="catalog-card__title-decore">Автономные установки пожаротушения</span>
+      </h3>
       <ul class="list-reset catalog-card__list">
         <li class="catalog-card__item">
           <h4 class="catalog-card__item-title">Генератор огнетушащего аэрозоля FR 300 E</h4>
           <picture>
             <source srcset="./img/catalog-manual.avif" type="image/avif">
             <source srcset="./img/catalog-manual.webp" type="image/webp">
-            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366"
-              height="339" alt="Картинка">
+            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
+              alt="Картинка">
           </picture>
           <div class="catalog-card__item-descr">
             <span class="catalog-card__item-sum">160 000 ₽</span>
@@ -204,8 +244,8 @@
           <picture>
             <source srcset="./img/catalog-manual.avif" type="image/avif">
             <source srcset="./img/catalog-manual.webp" type="image/webp">
-            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366"
-              height="339" alt="Картинка">
+            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
+              alt="Картинка">
           </picture>
           <div class="catalog-card__item-descr">
             <span class="catalog-card__item-sum">160 000 ₽</span>
@@ -220,8 +260,8 @@
           <picture>
             <source srcset="./img/catalog-manual.avif" type="image/avif">
             <source srcset="./img/catalog-manual.webp" type="image/webp">
-            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366"
-              height="339" alt="Картинка">
+            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
+              alt="Картинка">
           </picture>
           <div class="catalog-card__item-descr">
             <span class="catalog-card__item-sum">160 000 ₽</span>
@@ -240,8 +280,8 @@
           <picture>
             <source srcset="./img/catalog-manual.avif" type="image/avif">
             <source srcset="./img/catalog-manual.webp" type="image/webp">
-            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366"
-              height="339" alt="Картинка">
+            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
+              alt="Картинка">
           </picture>
           <div class="catalog-card__item-descr">
             <span class="catalog-card__item-sum">160 000 ₽</span>
@@ -256,8 +296,8 @@
           <picture>
             <source srcset="./img/catalog-manual.avif" type="image/avif">
             <source srcset="./img/catalog-manual.webp" type="image/webp">
-            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366"
-              height="339" alt="Картинка">
+            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
+              alt="Картинка">
           </picture>
           <div class="catalog-card__item-descr">
             <span class="catalog-card__item-sum">160 000 ₽</span>
@@ -272,8 +312,8 @@
           <picture>
             <source srcset="./img/catalog-manual.avif" type="image/avif">
             <source srcset="./img/catalog-manual.webp" type="image/webp">
-            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366"
-              height="339" alt="Картинка">
+            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
+              alt="Картинка">
           </picture>
           <div class="catalog-card__item-descr">
             <span class="catalog-card__item-sum">162 000 ₽</span>
@@ -290,17 +330,127 @@
 </section>
 
 <div class="graph-modal">
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="info">
-    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно"></button>
-    <div class="graph-modal__content">fghfghfgh</div>
+  <div class="graph-modal__container catalog-modal" role="dialog" aria-modal="true" data-graph-target="info">
+    <button class="btn-reset graph-modal__close js-modal-close catalog-modal__close"
+      aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <h2 class="catalog-modal__title">Генератор огнетушащего аэрозоля FR 300 E</h2>
+      <div class="catalog-modal__descr">
+        <picture>
+          <source srcset="./img/catalog-manual.avif" type="image/avif">
+          <source srcset="./img/catalog-manual.webp" type="image/webp">
+          <img loading="lazy" src="./img/catalog-manual.png" class="image" width="366" height="339" alt="Картинка">
+        </picture>
+        <div class="catalog-modal__spec">
+          <h3 class="catalog-modal__spec-title">Характеристики: </h3>
+          <ul class="catalog-modal__list list-reset">
+            <li class="catalog-modal__item">
+              запуск <span class="catalog-modal__item--size">электрический, от пожарной автоматики</span>
+            </li>
+            <li class="catalog-modal__item">
+              габариты (длина, диаметр), мм: <span class="catalog-modal__item--size">160×93</span>
+            </li>
+            <li class="catalog-modal__item">
+              максимальная масса, кг: <span class="catalog-modal__item--size">1,2</span>
+            </li>
+            <li class="catalog-modal__item">
+              температурный диапазон: <span class="catalog-modal__item--size">от -60оС до +60оС</span>
+            </li>
+            <li class="catalog-modal__item">
+              защищаемый объем, м3: <span class="catalog-modal__item--size">12</span>
+            </li>
+            <li class="catalog-modal__item">
+              гарантированный срок эксплуатации: <span class="catalog-modal__item--size">10 лет</span>
+            </li>
+          </ul>
+          <div class="catalog-modal__price">
+            <div class="catalog-modal__summ">160 000 ₽</div>
+            <button class="btn-reset catalog-modal__price-btn">Заказать</button>
+          </div>
+        </div>
+      </div>
+      <p class="catalog-modal__text">Генератор огнетушащего аэрозоля, предназначен для тушения пожаров класса
+        А (подкласс А2), B, C, E (твёрдых горючих материалов, жидкостей, газообразных веществ и электрооборудования
+        под напряжением до 38 кВ</p>
+      <div class="catalog-modal__designed">
+        <h3 class="catalog-modal__spec-title">Предназначен для тушения: </h3>
+        <ul class="list-reset catalog-modal__designed-list">
+          <li class="catalog-modal__designed-item">
+            <img loading="lazy" src="./img/designed-1.svg" class="image" width="40" height="40"
+              alt="производства и склады">
+            <span class="catalog-modal__designed-text">
+              производства и склады
+            </span>
+          </li>
+          <li class="catalog-modal__designed-item">
+            <img loading="lazy" src="./img/designed-2.svg" class="image" width="40" height="40"
+              alt="производства и склады">
+            <span class="catalog-modal__designed-text">
+              электрощитовые и кабельные сооружения
+            </span>
+          </li>
+          <li class="catalog-modal__designed-item">
+            <img loading="lazy" src="./img/designed-3.svg" class="image" width="40" height="40"
+              alt="производства и склады">
+            <span class="catalog-modal__designed-text">
+              моторные отсеки гражданской и спецтехники
+            </span>
+          </li>
+          <li class="catalog-modal__designed-item">
+            <img loading="lazy" src="./img/designed-4.svg" class="image" width="40" height="40"
+              alt="производства и склады">
+            <span class="catalog-modal__designed-text">
+              серверные и дата-центры
+            </span>
+          </li>
+        </ul>
+      </div>
+      <button class="btn-reset catalog-modal__btn">
+        <span class="catalog-modal__btn-text">Скачать сертификат FR 300 E.pdf</span></button>
+    </div>
   </div>
-  <div class="graph-modal__container" role="dialogп" aria-modal="true" data-graph-target="plus">
-    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно"></button>
-    <div class="graph-modal__content">fghfghfgh1111111</div>
-  </div>
-  <div class="graph-modal__container" role="dialogп" aria-modal="true" data-graph-target="pluss">
-    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно"></button>
-    <div class="graph-modal__content">fghfg11111111111111111111111111hfgh1111111</div>
+  <div class="graph-modal__container catalog-step" role="dialog" aria-modal="true" data-graph-target="plus">
+    <button class="btn-reset graph-modal__close js-modal-close catalog-modal__close"
+      aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <h2 class="catalog-modal__title">Оформление заказа</h2>
+      <h3 class="catalog-modal__title-form">Генератор огнетушащего аэрозоля FR 300 E</h3>
+      <div class="catalog-modal__count">
+        <picture>
+          <source srcset="./img/catalog-manual.avif" type="image/avif">
+          <source srcset="./img/catalog-manual.webp" type="image/webp">
+          <img loading="lazy" src="./img/catalog-manual.png" class="image" width="190" height="174" alt="Картинка">
+        </picture>
+        <div class="stepper">
+          <span class="stepper__text">кол-во: </span>
+          <div class="stepper__wrapper">
+            <button class="stepper__btn stepper__btn--down stepper__btn--disabled" aria-label="Уменьшить количество">
+              <img loading="lazy" src="./img/step-min.svg" class="image" width="30" height="30" alt="шаг минус">
+            </button>
+            <label class="stepper__field">
+              <input type="text" value="1" maxlength="3" class="stepper__input">
+            </label>
+            <button class="stepper__btn stepper__btn--up" aria-label="Увеличить количество">
+              <img loading="lazy" src="./img/step-plus.svg" class="image" width="30" height="30" alt="шаг плюс">
+            </button>
+          </div>
+        </div>
+      </div>
+      <form action="#" class="catalog-modal__form">
+        <label class="catalog-modal__form-label">
+          <input type="text" name="Имя" class="input-reset catalog-modal__form-input" placeholder="Имя">
+        </label>
+        <label class="catalog-modal__form-label">
+          <input type="tel" name="Телефон" class="input-reset catalog-modal__form-input" placeholder="Телефон">
+        </label>
+        <label class="catalog-modal__form-label">
+          <textarea name="Комментарий" cols="30" rows="10"
+          class="input-reset catalog-modal__form-input catalog-modal__form-input--textarea"></textarea>
+        </label>
+        <p class="catalog-modal__form-text">Нажимая кнопку «Заказать» вы соглашаетесь с условиями обработки персональных данных</p>
+        <button class="btn-reset catalog-modal__price-btn">Заказать</button>
+      </form>
+    </div>
   </div>
 </div>
 
@@ -405,46 +555,46 @@
 </section>
 
     <section class="cert">
-  <div class="container">
+  <div class="container cert__container">
+    <div class="new__btns">
+      <button class="btn-reset cert__slider-btn cert__slider-btn--prev"></button>
+      <button class="btn-reset cert__slider-btn cert__slider-btn--next"></button>
+    </div>
     <div class="swiper cert__slider">
-      <div class="new__btns">
-        <button class="btn-reset cert__slider-btn cert__slider-btn--prev"></button>
-        <button class="btn-reset cert__slider-btn cert__slider-btn--next"></button>
-      </div>
       <div class="swiper-wrapper">
          <div class="swiper-slide cert__slide">
-           <picture>
+           <picture class="cert-image">
              <source srcset="./img/cert-1.avif" type="image/avif">
              <source srcset="./img/cert-1.webp" type="image/webp">
-             <img loading="lazy" src="./img/cert-1.png" class="image" width="373" height="492" alt="Сертификат">
+             <img loading="lazy" src="./img/cert-1.png" class="cert-image" width="373" height="492" alt="Сертификат">
            </picture>
          </div>
          <div class="swiper-slide cert__slide">
           <picture>
             <source srcset="./img/cert-1.avif" type="image/avif">
             <source srcset="./img/cert-1.webp" type="image/webp">
-            <img loading="lazy" src="./img/cert-1.png" class="image" width="373" height="492" alt="Сертификат">
+            <img loading="lazy" src="./img/cert-1.png" class="cert-image" width="373" height="492" alt="Сертификат">
           </picture>
         </div>
         <div class="swiper-slide cert__slide">
           <picture>
             <source srcset="./img/cert-1.avif" type="image/avif">
             <source srcset="./img/cert-1.webp" type="image/webp">
-            <img loading="lazy" src="./img/cert-1.png" class="image" width="373" height="492" alt="Сертификат">
+            <img loading="lazy" src="./img/cert-1.png" class="cert-image"" width="373" height="492" alt="Сертификат">
           </picture>
         </div>
         <div class="swiper-slide cert__slide">
           <picture>
             <source srcset="./img/cert-1.avif" type="image/avif">
             <source srcset="./img/cert-1.webp" type="image/webp">
-            <img loading="lazy" src="./img/cert-1.png" class="image" width="373" height="492" alt="Сертификат">
+            <img loading="lazy" src="./img/cert-1.png" class="cert-image" width="373" height="492" alt="Сертификат">
           </picture>
         </div>
         <div class="swiper-slide cert__slide">
           <picture>
             <source srcset="./img/cert-1.avif" type="image/avif">
             <source srcset="./img/cert-1.webp" type="image/webp">
-            <img loading="lazy" src="./img/cert-1.png" class="image" width="373" height="492" alt="Сертификат">
+            <img loading="lazy" src="./img/cert-1.png" class="cert-image" width="373" height="492" alt="Сертификат">
           </picture>
         </div>
       </div>
@@ -460,27 +610,54 @@
         <h2 class="contacts__col-title">Адрес:</h2>
         <address class="contacts__col-text">603127, г. Н. Новгород, ул. Коновалова, д. 5, офис 11</address>
       </div>
-      <div class="contacts__col">
-        <h2 class="contacts__col-title">Эл. почта:</h2>
-        <a href="mailto:info@sf-nn.ru" class="contacts__col-text">info@sf-nn.ru</a>
-      </div>
-      <div class="contacts__col">
-        <h2 class="contacts__col-title">Телефоны:</h2>
-        <a href="tel:+78312157060" class="contacts__col-text">+7 (83-12) 15-70-60</a>
-      </div>
-      <div class="contacts__col">
-        <picture>
-          <source srcset="./img/cont-logo.avif" type="image/avif">
-          <source srcset="./img/cont-logo.webp" type="image/webp">
-          <img loading="lazy" src="./img/cont-logo.svg" class="image" width="409" height="450" alt="Логотип">
-        </picture>
+      <div class="contacts__col-wrapper">
+        <div class="contacts__col">
+          <h2 class="contacts__col-title">Эл. почта:</h2>
+          <a href="mailto:info@sf-nn.ru" class="contacts__col-text">info@sf-nn.ru</a>
+        </div>
+        <div class="contacts__col">
+          <h2 class="contacts__col-title">Телефоны:</h2>
+          <a href="tel:+78312157060" class="contacts__col-text">+7 (83-12) 15-70-60</a>
+          <ul class="list-reset contacts__social">
+            <li class="contacts__social-item">
+              <a href="#" target="_blank" class="contacts__social-link contacts__social-link--tg">
+                <img loading="lazy" src="./img/contacts-telegramm.svg" class="image" width="15" height="13"
+                  alt="Телеграмм">
+              </a>
+            </li>
+            <li class="contacts__social-item">
+              <a href="#" target="_blank" class="contacts__social-link contacts__social-link--wa">
+                <img loading="lazy" src="./img/contacts-watsapp.svg" class="image" width="16" height="16"
+                  alt="Whatsapp">
+              </a>
+            </li>
+            <li class="contacts__social-item">
+              <a href="#" target="_blank" class="contacts__social-link contacts__social-link--vb">
+                <img loading="lazy" src="./img/contacts-viber.svg" class="image" width="16" height="17" alt="Viber">
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+    <section class="map">
+  <div id="map" style="width: 100%; height: 593px"></div>
+</section>
+
     <footer class="footer">
-  <div class="container"></div>
+  <div class="container footer__container">
+    <span class="footer__link">Все права защищены © 2022</span>
+    <a href="#" class="footer__link">Публичная оферта</a>
+    <a href="#" class="footer__link">
+      <span class="footer__link-text">Разработка сайтов</span>
+      <svg class="footer__artix">
+        <use xlink:href="img/sprite.svg#artix"></use>
+      </svg>
+    </a>
+  </div>
 </footer>
 
   </div>

@@ -13,6 +13,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_video__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/video */ "./src/js/components/video.js");
 /* harmony import */ var _components_video__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_video__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/slider */ "./src/js/components/slider.js");
+/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/map */ "./src/js/components/map.js");
+/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_map__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_step__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/step */ "./src/js/components/step.js");
+/* harmony import */ var _components_step__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_step__WEBPACK_IMPORTED_MODULE_4__);
+
+
 
 
 
@@ -130,6 +136,47 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/map.js":
+/*!**********************************!*\
+  !*** ./src/js/components/map.js ***!
+  \**********************************/
+/***/ (() => {
+
+var center = [56.351872449677685, 43.8019238512039];
+
+function init() {
+  var map = new ymaps.Map('map', {
+    center: center,
+    zoom: 17
+  });
+  var placemark = new ymaps.Placemark([56.351872449677685, 43.8019238512039], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: './img/marker.svg',
+    iconImageSize: [62, 88],
+    iconImageOffset: [0, 0]
+  });
+  map.controls.remove('geolocationControl'); // удаляем геолокацию
+
+  map.controls.remove('searchControl'); // удаляем поиск
+
+  map.controls.remove('trafficControl'); // удаляем контроль трафика
+
+  map.controls.remove('typeSelector'); // удаляем тип
+
+  map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+
+  map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+
+  map.controls.remove('rulerControl'); // удаляем контрол правил
+  // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+
+  map.geoObjects.add(placemark);
+}
+
+ymaps.ready(init);
+
+/***/ }),
+
 /***/ "./src/js/components/modal.js":
 /*!************************************!*\
   !*** ./src/js/components/modal.js ***!
@@ -172,12 +219,16 @@ if (swipersNew) {
         slidesPerView: 1,
         spaceBetween: 20
       },
-      // when window width is >= 480px
-      630: {
+      768: {
         slidesPerView: 2,
         spaceBetween: 30
       },
-      1366: {
+      // when window width is >= 480px
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      1600: {
         slidesPerView: 4,
         spaceBetween: 50
       }
@@ -186,6 +237,112 @@ if (swipersNew) {
 }
 
 ;
+
+/***/ }),
+
+/***/ "./src/js/components/step.js":
+/*!***********************************!*\
+  !*** ./src/js/components/step.js ***!
+  \***********************************/
+/***/ (() => {
+
+var stepper = document.querySelector('.stepper');
+var stepperInput = stepper.querySelector('.stepper__input');
+var stepperBtnUp = stepper.querySelector('.stepper__btn--up');
+var stepperBtnDown = stepper.querySelector('.stepper__btn--down');
+var count = stepperInput.value;
+
+var isNotApple = function isNotApple() {
+  if (!/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    return false;
+  }
+
+  return true;
+};
+
+function allowNumbersOnly(e) {
+  var code = e.which ? e.which : e.keyCode;
+
+  if (code > 31 && (code < 48 || code > 57)) {
+    e.preventDefault();
+  }
+}
+
+stepperInput.addEventListener('keyup', function (e) {
+  var self = e.currentTarget;
+
+  if (self.value == '0') {
+    self.value = 1;
+  }
+
+  if (isNotApple) {
+    self.style.width = "".concat(self.value.length + 1, "ex");
+  } else {
+    self.style.width = "".concat(self.value.length + 2, "ex");
+  }
+
+  count = stepperInput.value;
+
+  if (count == 1) {
+    stepperBtnDown.classList.add('stepper__btn--disabled');
+  } else {
+    stepperBtnDown.classList.remove('stepper__btn--disabled');
+  }
+});
+stepperInput.addEventListener('keypress', function (e) {
+  allowNumbersOnly(e);
+});
+stepperInput.addEventListener('change', function (e) {
+  var self = e.currentTarget;
+
+  if (!self.value) {
+    self.value = 1;
+  }
+
+  count = stepperInput.value;
+
+  if (count == 1) {
+    stepperBtnDown.classList.add('stepper__btn--disabled');
+  } else {
+    stepperBtnDown.classList.remove('stepper__btn--disabled');
+  }
+});
+stepperBtnUp.addEventListener('click', function (e) {
+  e.preventDefault();
+  count++;
+
+  if (count == 1) {
+    stepperBtnDown.classList.add('stepper__btn--disabled');
+  } else {
+    stepperBtnDown.classList.remove('stepper__btn--disabled');
+  }
+
+  stepperInput.value = count;
+
+  if (isNotApple) {
+    stepperInput.style.width = "".concat(stepperInput.value.length + 1, "ex");
+  } else {
+    stepperInput.style.width = "".concat(stepperInput.value.length + 2, "ex");
+  }
+});
+stepperBtnDown.addEventListener('click', function (e) {
+  e.preventDefault();
+  count--;
+
+  if (count == 1) {
+    stepperBtnDown.classList.add('stepper__btn--disabled');
+  } else {
+    stepperBtnDown.classList.remove('stepper__btn--disabled');
+  }
+
+  stepperInput.value = count;
+
+  if (isNotApple) {
+    stepperInput.style.width = "".concat(stepperInput.value.length + 1, "ex");
+  } else {
+    stepperInput.style.width = "".concat(stepperInput.value.length + 2, "ex");
+  }
+});
 
 /***/ }),
 
@@ -750,6 +907,7 @@ class GraphModal {
     document.body.style.paddingRight = '0px';
   }
 }
+
 
 
 /***/ }),
