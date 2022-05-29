@@ -20,24 +20,50 @@
 
 <body class="page__body">
   <div class="site-container">
-    <header class="header d-n">
+    <header class="header">
   <div class="container header__container">
     <img loading="lazy" src="./img/logo.svg" class="logo__image" width="152" height="69"
       alt="Логотип Инициатива Поволжье">
-    <nav class="nav">
+    <nav class="nav" data-menu data-menu-overlay>
       <ul class="list-reset nav__list">
         <li class="nav__item"><a href="#manual" class="nav__link">Ручные системы пожаротушения</a></li>
         <li class="nav__item"><a href="#standalone" class="nav__link">Автономные установки пожаротушения</a></li>
         <li class="nav__item"><a href="#stationary" class="nav__link">Стационарные генераторы</a></li>
       </ul>
+      <div class="header__contacts header__contacts--nav">
+        <a href="mailto:info@sf-nn.ru" class="header__mail">info@sf-nn.ru</a>
+        <a href="tel:+78312157060" class="header__tel">+7 (83-12) 15-70-60</a>
+        <ul class="list-reset header__social">
+          <li class="header__social-item">
+            <a href="#" target="_blank" class="header__social-link header__social-link--tg">
+              <img loading="lazy" src="./img/contacts-telegramm.svg" class="image" width="9.5" height="8.5"
+                alt="Телеграмм">
+            </a>
+          </li>
+          <li class="header__social-item">
+            <a href="#" target="_blank" class="header__social-link header__social-link--wa">
+              <img loading="lazy" src="./img/contacts-watsapp.svg" class="image" width="10" height="10" alt="Whatsapp">
+            </a>
+          </li>
+          <li class="header__social-item">
+            <a href="#" target="_blank" class="header__social-link header__social-link--vb">
+              <img loading="lazy" src="./img/contacts-viber.svg" class="image" width="10" height="11" alt="Viber">
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span class="burger__line"></span>
+    </button>
     <div class="header__contacts">
       <a href="mailto:info@sf-nn.ru" class="header__mail">info@sf-nn.ru</a>
       <a href="tel:+78312157060" class="header__tel">+7 (83-12) 15-70-60</a>
       <ul class="list-reset header__social">
         <li class="header__social-item">
           <a href="#" target="_blank" class="header__social-link header__social-link--tg">
-            <img loading="lazy" src="./img/contacts-telegramm.svg" class="image" width="9.5" height="8.5" alt="Телеграмм">
+            <img loading="lazy" src="./img/contacts-telegramm.svg" class="image" width="9.5" height="8.5"
+              alt="Телеграмм">
           </a>
         </li>
         <li class="header__social-item">
@@ -58,8 +84,10 @@
     <section class="hero ">
   <div class="container hero__container">
     <div class="hero__wrapper">
-      <h1 class="hero__title">Инновационные системы пожаротушения</h1>
-      <a href="#" download="" class="hero__btn">Скачать презентацию</a>
+      <div class="hero__wrapper-second">
+        <h1 class="hero__title">Инновационные системы пожаротушения</h1>
+        <a href="#" download="" class="hero__btn">Скачать презентацию</a>
+      </div>
     </div>
   </div>
 </section>
@@ -126,14 +154,16 @@
   </div>
 </section>
 
-    <section class="benefit">
+    <section class="benefit decore">
   <div class="container benefit__container">
     <h2 class="visually-hidden">Преимущества</h2>
     <ul class="list-reset benefit__list">
       <li class="benefit__item">
         <img loading="lazy" src="./img/benefit-1.svg" class="benefit__image" width="70" height="70" alt="Безопасность">
         <h3 class="benefit__item-title">Безопасность</h3>
-        <p class="benefit__item-text">Аэрозоль не вытесняет кислород и не выделяет вредные вещества. ФУМАРОЛА безопасна для здоровья людей и животных, что подтверждено отчётом ВНИИЖГ Роспотребнадзора. Также явлется диэлетриком.</p>
+        <p class="benefit__item-text">Аэрозоль не вытесняет кислород и не выделяет вредные вещества. ФУМАРОЛА безопасна
+          для здоровья людей и животных, что подтверждено отчётом ВНИИЖГ Роспотребнадзора. Также явлется диэлетриком.
+        </p>
       </li>
       <li class="benefit__item">
         <img loading="lazy" src="./img/benefit-2.svg" class="benefit__image" width="70" height="70" alt="Экономичность">
@@ -143,22 +173,28 @@
       <li class="benefit__item">
         <img loading="lazy" src="./img/benefit-3.svg" class="benefit__image" width="70" height="70" alt="Компактность">
         <h3 class="benefit__item-title">Компактность</h3>
-        <p class="benefit__item-text">Системы пожаротушения ФУМАРОЛА занимают мало места и легко монтируются в электро-шкафы, двигательные отсеки, серверные.</p>
+        <p class="benefit__item-text">Системы пожаротушения ФУМАРОЛА занимают мало места и легко монтируются
+          в электро-шкафы, двигательные отсеки, серверные.</p>
       </li>
       <li class="benefit__item">
         <img loading="lazy" src="./img/benefit-4.svg" class="benefit__image" width="70" height="70" alt="Экологичность">
         <h3 class="benefit__item-title">Экологичность</h3>
-        <p class="benefit__item-text">Ликвидировать последствия возгорания можно сразу после тушения без риска для здоровья, ущерба имущества и оборудования.</p>
+        <p class="benefit__item-text">Ликвидировать последствия возгорания можно сразу после тушения без риска
+          для здоровья, ущерба имущества и оборудования.</p>
       </li>
       <li class="benefit__item">
-        <img loading="lazy" src="./img/benefit-5.svg" class="benefit__image" width="70" height="70" alt="Лёгкость монтажа">
+        <img loading="lazy" src="./img/benefit-5.svg" class="benefit__image" width="70" height="70"
+          alt="Лёгкость монтажа">
         <h3 class="benefit__item-title">Лёгкость монтажа</h3>
-        <p class="benefit__item-text">Генераторы огнетушащего аэрозоля ФУМАРОЛА можно установить с помощью простого набора инструментов.</p>
+        <p class="benefit__item-text">Генераторы огнетушащего аэрозоля ФУМАРОЛА можно установить с помощью простого
+          набора инструментов.</p>
       </li>
       <li class="benefit__item">
-        <img loading="lazy" src="./img/benefit-6.svg" class="benefit__image" width="70" height="70" alt="Импортозамещение">
+        <img loading="lazy" src="./img/benefit-6.svg" class="benefit__image" width="70" height="70"
+          alt="Импортозамещение">
         <h3 class="benefit__item-title">Импортозамещение</h3>
-        <p class="benefit__item-text">Инновационные системы пожаротушения разработаны российскими инженерами и не имеют аналогов в мире.</p>
+        <p class="benefit__item-text">Инновационные системы пожаротушения разработаны российскими инженерами и не имеют
+          аналогов в мире.</p>
       </li>
     </ul>
   </div>
@@ -168,8 +204,9 @@
   <div class="container catalog__container">
     <h2 class="catalog__title">Каталог</h2>
     <div class="catalog-card">
-      <h3 class="catalog-card__title"><span class="catalog-card__title-decore">Ручные системы пожаротушения</span></h3>
-      <ul class="list-reset catalog-card__list">
+      <h3 id="manual" class="catalog-card__title"><span class="catalog-card__title-decore">Ручные системы
+          пожаротушения</span></h3>
+      <ul id="manual-btn" class="list-reset catalog-card__list">
         <li class="catalog-card__item">
           <h4 class="catalog-card__item-title">Генератор огнетушащего аэрозоля FR 300 E</h4>
           <picture>
@@ -218,9 +255,45 @@
             </div>
           </div>
         </li>
-        <button class="btn-reset catalog-card__btn">развернуть еще</button>
+        <li class="catalog-card__item is-hidden tab_content">
+          <h4 class="catalog-card__item-title">Генератор огнетушащего аэрозоля FR 300 E</h4>
+          <picture>
+            <source srcset="./img/catalog-manual.avif" type="image/avif">
+            <source srcset="./img/catalog-manual.webp" type="image/webp">
+            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
+              alt="Картинка">
+          </picture>
+          <div class="catalog-card__item-descr">
+            <span class="catalog-card__item-sum">160 000 ₽</span>
+            <div class="catalog-card__item-btns">
+              <button class="btn-reset catalog-card__item-info" data-graph-path="info"></button>
+              <button class="btn-reset catalog-card__item-plus" data-graph-path="plus"></button>
+            </div>
+          </div>
+        </li>
+        <li class="catalog-card__item is-hidden tab_content">
+          <h4 class="catalog-card__item-title">Генератор огнетушащего аэрозоля FR 300 E</h4>
+          <picture>
+            <source srcset="./img/catalog-manual.avif" type="image/avif">
+            <source srcset="./img/catalog-manual.webp" type="image/webp">
+            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
+              alt="Картинка">
+          </picture>
+          <div class="catalog-card__item-descr">
+            <span class="catalog-card__item-sum">160 000 ₽</span>
+            <div class="catalog-card__item-btns">
+              <button class="btn-reset catalog-card__item-info" data-graph-path="info"></button>
+              <button class="btn-reset catalog-card__item-plus" data-graph-path="plus"></button>
+            </div>
+          </div>
+        </li>
+        <div class="catalog-card__btns">
+          <button class="btn-reset catalog-card__btn text_more">развернуть еще</button>
+          <img loading="lazy" src="./img/btn-ar.svg" class="image-up icon_more" width="9" height="9" alt="стрелка">
+        </div>
       </ul>
-      <h3 class="catalog-card__title"><span class="catalog-card__title-decore">Автономные установки пожаротушения</span>
+      <h3 id="standalone" class="catalog-card__title"><span class="catalog-card__title-decore">Автономные установки
+          пожаротушения</span>
       </h3>
       <ul class="list-reset catalog-card__list">
         <li class="catalog-card__item">
@@ -271,9 +344,45 @@
             </div>
           </div>
         </li>
-        <button class="btn-reset catalog-card__btn">развернуть еще</button>
+        <li class="catalog-card__item is-hidden tab_content">
+          <h4 class="catalog-card__item-title">Генератор огнетушащего аэрозоля FR 300 E</h4>
+          <picture>
+            <source srcset="./img/catalog-manual.avif" type="image/avif">
+            <source srcset="./img/catalog-manual.webp" type="image/webp">
+            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
+              alt="Картинка">
+          </picture>
+          <div class="catalog-card__item-descr">
+            <span class="catalog-card__item-sum">160 000 ₽</span>
+            <div class="catalog-card__item-btns">
+              <button class="btn-reset catalog-card__item-info" data-graph-path="info"></button>
+              <button class="btn-reset catalog-card__item-plus" data-graph-path="plus"></button>
+            </div>
+          </div>
+        </li>
+        <li class="catalog-card__item is-hidden tab_content">
+          <h4 class="catalog-card__item-title">Генератор огнетушащего аэрозоля FR 300 E</h4>
+          <picture>
+            <source srcset="./img/catalog-manual.avif" type="image/avif">
+            <source srcset="./img/catalog-manual.webp" type="image/webp">
+            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
+              alt="Картинка">
+          </picture>
+          <div class="catalog-card__item-descr">
+            <span class="catalog-card__item-sum">160 000 ₽</span>
+            <div class="catalog-card__item-btns">
+              <button class="btn-reset catalog-card__item-info" data-graph-path="info"></button>
+              <button class="btn-reset catalog-card__item-plus" data-graph-path="plus"></button>
+            </div>
+          </div>
+        </li>
+        <div class="catalog-card__btns">
+          <button class="btn-reset catalog-card__btn text_more">развернуть еще</button>
+          <img loading="lazy" src="./img/btn-ar.svg" class="image-up icon_more" width="9" height="9" alt="стрелка">
+        </div>
       </ul>
-      <h3 class="catalog-card__title"><span class="catalog-card__title-decore">Стационарные генераторы</span></h3>
+      <h3 id="stationary" class="catalog-card__title"><span class="catalog-card__title-decore">Стационарные
+          генераторы</span></h3>
       <ul class="list-reset catalog-card__list">
         <li class="catalog-card__item">
           <h4 class="catalog-card__item-title">Генератор огнетушащего аэрозоля FR 300 E</h4>
@@ -445,16 +554,17 @@
         </label>
         <label class="catalog-modal__form-label">
           <textarea name="Комментарий" cols="30" rows="10"
-          class="input-reset catalog-modal__form-input catalog-modal__form-input--textarea"></textarea>
+            class="input-reset catalog-modal__form-input catalog-modal__form-input--textarea"></textarea>
         </label>
-        <p class="catalog-modal__form-text">Нажимая кнопку «Заказать» вы соглашаетесь с условиями обработки персональных данных</p>
+        <p class="catalog-modal__form-text">Нажимая кнопку «Заказать» вы соглашаетесь с условиями обработки персональных
+          данных</p>
         <button class="btn-reset catalog-modal__price-btn">Заказать</button>
       </form>
     </div>
   </div>
 </div>
 
-    <section class="innovate">
+    <section class="innovate decore decore--position">
   <div class="container">
     <h2 class="innovate__title">Инновации в действии</h2>
     <ul class="list-reset innovate__list">
@@ -513,7 +623,9 @@
         <h3 class="innovate__item-title">Название видео</h3>
       </li>
     </ul>
-    <button class="btn-reset innovate__btn">развернуть еще</button>
+    <div class="innovate__btns">
+      <button class="btn-reset innovate__btn">развернуть еще</button>
+    </div>
   </div>
 </section>
 
