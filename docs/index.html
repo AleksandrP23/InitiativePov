@@ -271,22 +271,6 @@
             </div>
           </div>
         </li>
-        <li class="catalog-card__item is-hidden tab_content">
-          <h4 class="catalog-card__item-title">Генератор огнетушащего аэрозоля FR 300 E</h4>
-          <picture>
-            <source srcset="./img/catalog-manual.avif" type="image/avif">
-            <source srcset="./img/catalog-manual.webp" type="image/webp">
-            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
-              alt="Картинка">
-          </picture>
-          <div class="catalog-card__item-descr">
-            <span class="catalog-card__item-sum">160 000 ₽</span>
-            <div class="catalog-card__item-btns">
-              <button class="btn-reset catalog-card__item-info" data-graph-path="info"></button>
-              <button class="btn-reset catalog-card__item-plus" data-graph-path="plus"></button>
-            </div>
-          </div>
-        </li>
         <div class="catalog-card__btns">
           <button class="btn-reset catalog-card__btn text_more">развернуть еще</button>
           <img loading="lazy" src="./img/btn-ar.svg" class="image-up icon_more" width="9" height="9" alt="стрелка">
@@ -295,7 +279,7 @@
       <h3 id="standalone" class="catalog-card__title"><span class="catalog-card__title-decore">Автономные установки
           пожаротушения</span>
       </h3>
-      <ul class="list-reset catalog-card__list">
+      <ul id="standalone-btn" class="list-reset catalog-card__list">
         <li class="catalog-card__item">
           <h4 class="catalog-card__item-title">Генератор огнетушащего аэрозоля FR 300 E</h4>
           <picture>
@@ -329,22 +313,6 @@
           </div>
         </li>
         <li class="catalog-card__item">
-          <h4 class="catalog-card__item-title">Генератор огнетушащего аэрозоля FR 300 E</h4>
-          <picture>
-            <source srcset="./img/catalog-manual.avif" type="image/avif">
-            <source srcset="./img/catalog-manual.webp" type="image/webp">
-            <img loading="lazy" src="./img/catalog-manual.png" class="catalog-card__item-image" width="366" height="339"
-              alt="Картинка">
-          </picture>
-          <div class="catalog-card__item-descr">
-            <span class="catalog-card__item-sum">160 000 ₽</span>
-            <div class="catalog-card__item-btns">
-              <button class="btn-reset catalog-card__item-info" data-graph-path="info"></button>
-              <button class="btn-reset catalog-card__item-plus" data-graph-path="plus"></button>
-            </div>
-          </div>
-        </li>
-        <li class="catalog-card__item is-hidden tab_content">
           <h4 class="catalog-card__item-title">Генератор огнетушащего аэрозоля FR 300 E</h4>
           <picture>
             <source srcset="./img/catalog-manual.avif" type="image/avif">
@@ -567,7 +535,7 @@
     <section class="innovate decore decore--position">
   <div class="container">
     <h2 class="innovate__title">Инновации в действии</h2>
-    <ul class="list-reset innovate__list">
+    <ul id="innovate-btn" class="list-reset innovate__list">
       <li class="innovate__item">
         <div class="video video--visible">
           <video src="./video.mp4" poster="img/video-poster.png" muted preload="metadata" playsinline></video>
@@ -614,6 +582,15 @@
         <h3 class="innovate__item-title">Название видео</h3>
       </li>
       <li class="innovate__item">
+        <div class="video video--visible">
+          <video src="./video.mp4" poster="img/video-poster.png" muted preload="metadata" playsinline></video>
+          <button class="btn-reset video__play">
+            <img loading="lazy" src="./img/video-play.svg" class="image" width="456" height="300" alt="Play видео">
+          </button>
+        </div>
+        <h3 class="innovate__item-title">Название видео</h3>
+      </li>
+      <li class="innovate__item is-hidden tab_content">
         <div class="video video--visible">
           <video src="./video.mp4" poster="img/video-poster.png" muted preload="metadata" playsinline></video>
           <button class="btn-reset video__play">
@@ -623,8 +600,12 @@
         <h3 class="innovate__item-title">Название видео</h3>
       </li>
     </ul>
-    <div class="innovate__btns">
+    <!-- <div class="innovate__btns">
       <button class="btn-reset innovate__btn">развернуть еще</button>
+    </div> -->
+    <div class="catalog-card__btns">
+      <button class="btn-reset catalog-card__btn text_more">развернуть еще</button>
+      <img loading="lazy" src="./img/btn-ar.svg" class="image-up icon_more" width="9" height="9" alt="стрелка">
     </div>
   </div>
 </section>

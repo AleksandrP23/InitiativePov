@@ -182,6 +182,16 @@ var hidden_list = document.querySelector('#manual-btn .tab_content');
 var icon_more = document.querySelector('#manual-btn .icon_more');
 var more_text = document.querySelector('#manual-btn .text_more');
 tab(download_more, hidden_list, icon_more, more_text, "развернуть еще", "свернуть");
+var download_more = document.querySelector('#standalone-btn .catalog-card__btn');
+var hidden_list = document.querySelector('#standalone-btn .tab_content');
+var icon_more = document.querySelector('#standalone-btn .icon_more');
+var more_text = document.querySelector('#standalone-btn .text_more');
+tab(download_more, hidden_list, icon_more, more_text, "развернуть еще", "свернуть");
+var download_more = document.querySelector('#innovate-btn .catalog-card__btn');
+var hidden_list = document.querySelector('#innovate-btn .tab_content');
+var icon_more = document.querySelector('#innovate-btn .icon_more');
+var more_text = document.querySelector('#innovate-btn .text_more');
+tab(download_more, hidden_list, icon_more, more_text, "развернуть еще", "свернуть");
 
 /***/ }),
 
