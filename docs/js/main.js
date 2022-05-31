@@ -149,49 +149,52 @@ __webpack_require__.r(__webpack_exports__);
 
 function tab(but_tab, hidden_block_tab, icon_tab, text_block, before_text, after_text) {
   but_tab.addEventListener("click", function () {
-    if (hidden_block_tab.classList.contains('is-hidden')) {
-      hidden_block_tab.classList.remove('is-hidden');
-      hidden_block_tab.classList.add('visible-block');
+    var elements = Array.from(hidden_block_tab);
+    elements.forEach(function (el) {
+      if (el.classList.contains('is-hidden')) {
+        el.classList.remove('is-hidden');
+        el.classList.add('visible-block');
 
-      if (icon_tab) {
-        icon_tab.classList.remove('image-down');
-        icon_tab.classList.add('image-up');
-      }
+        if (icon_tab) {
+          icon_tab.classList.remove('image-down');
+          icon_tab.classList.add('image-up');
+        }
 
-      if (text_block) {
-        text_block.innerHTML = after_text;
-      }
-    } else if (hidden_block_tab.classList.contains('visible-block')) {
-      hidden_block_tab.classList.remove('visible-block');
-      hidden_block_tab.classList.add('is-hidden');
+        if (text_block) {
+          text_block.innerHTML = after_text;
+        }
+      } else if (el.classList.contains('visible-block')) {
+        el.classList.remove('visible-block');
+        el.classList.add('is-hidden');
 
-      if (icon_tab) {
-        icon_tab.classList.remove('image-up');
-        icon_tab.classList.add('image-down');
-      }
+        if (icon_tab) {
+          icon_tab.classList.remove('image-up');
+          icon_tab.classList.add('image-down');
+        }
 
-      if (text_block) {
-        text_block.innerHTML = before_text;
+        if (text_block) {
+          text_block.innerHTML = before_text;
+        }
       }
-    }
+    });
   });
 }
 
-var download_more = document.querySelector('#manual-btn .catalog-card__btn');
-var hidden_list = document.querySelector('#manual-btn .tab_content');
+var download_more = document.querySelector('#m-btn');
+var download_more1 = document.querySelector('#s-btn');
+var download_more2 = document.querySelector('#i-btn');
+var hidden_list = document.querySelectorAll('#manual-btn .tab_content');
+var hidden_list1 = document.querySelectorAll('#standalone-btn .tab_content');
+var hidden_list2 = document.querySelectorAll('#innovate-btn .tab_content');
 var icon_more = document.querySelector('#manual-btn .icon_more');
+var icon_more1 = document.querySelector('#standalone-btn .icon_more');
+var icon_more2 = document.querySelector('#innovate-btn .icon_more');
 var more_text = document.querySelector('#manual-btn .text_more');
+var more_text1 = document.querySelector('#standalone-btn .text_more');
+var more_text2 = document.querySelector('#innovate-btn .text_more');
 tab(download_more, hidden_list, icon_more, more_text, "развернуть еще", "свернуть");
-var download_more = document.querySelector('#standalone-btn .catalog-card__btn');
-var hidden_list = document.querySelector('#standalone-btn .tab_content');
-var icon_more = document.querySelector('#standalone-btn .icon_more');
-var more_text = document.querySelector('#standalone-btn .text_more');
-tab(download_more, hidden_list, icon_more, more_text, "развернуть еще", "свернуть");
-var download_more = document.querySelector('#innovate-btn .catalog-card__btn');
-var hidden_list = document.querySelector('#innovate-btn .tab_content');
-var icon_more = document.querySelector('#innovate-btn .icon_more');
-var more_text = document.querySelector('#innovate-btn .text_more');
-tab(download_more, hidden_list, icon_more, more_text, "развернуть еще", "свернуть");
+tab(download_more1, hidden_list1, icon_more1, more_text1, "развернуть еще", "свернуть");
+tab(download_more2, hidden_list2, icon_more2, more_text2, "развернуть еще", "свернуть");
 
 /***/ }),
 
@@ -13748,4 +13751,3 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map
