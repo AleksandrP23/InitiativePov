@@ -19,6 +19,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_step__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_step__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/button */ "./src/js/components/button.js");
 /* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_button__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_scroll_smoth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/scroll-smoth */ "./src/js/components/scroll-smoth.js");
+
 
 
 
@@ -37,8 +39,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/burger */ "./src/js/functions/burger.js");
-/* harmony import */ var smooth_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! smooth-scroll */ "./node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js");
-/* harmony import */ var smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(smooth_scroll__WEBPACK_IMPORTED_MODULE_1__);
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 // Определение операционной системы на мобильных
@@ -89,9 +89,9 @@ __webpack_require__.r(__webpack_exports__);
 // import Rellax from 'rellax';
 // const rellax = new Rellax('.rellax');
 // Подключение плавной прокрутки к якорям
-
-
-var scroll = new (smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default())('a[href*="#"]'); // Подключение событий свайпа на мобильных
+// import SmoothScroll from 'smooth-scroll';
+// const scroll = new SmoothScroll('a[href*="#"]');
+// Подключение событий свайпа на мобильных
 // import 'swiped-events';
 // document.addEventListener('swiped', function(e) {
 //   console.log(e.target);
@@ -204,7 +204,6 @@ tab(download_more2, hidden_list2, icon_more2, more_text2, "развернуть 
   \**********************************/
 /***/ (() => {
 
-// let center = [56.351872449677685,43.8019238512039];
 var center = [56.351167678577426, 43.79961920550283];
 
 function init() {
@@ -251,6 +250,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graph_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graph-modal */ "./node_modules/graph-modal/src/graph-modal.js");
 
 var modal = new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]();
+
+/***/ }),
+
+/***/ "./src/js/components/scroll-smoth.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/scroll-smoth.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var smooth_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! smooth-scroll */ "./node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js");
+/* harmony import */ var smooth_scroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(smooth_scroll__WEBPACK_IMPORTED_MODULE_0__);
+
+var scroll = new (smooth_scroll__WEBPACK_IMPORTED_MODULE_0___default())('a[href*="#"]', {
+  speed: 300,
+  speedAsDuration: true
+});
 
 /***/ }),
 
@@ -415,17 +432,17 @@ stepperBtnDown.addEventListener('click', function (e) {
   \************************************/
 /***/ (() => {
 
-var about = document.querySelector('.innovate');
+var about = document.querySelectorAll('.innovate__item');
 
 if (about) {
-  var play = about.querySelector('.video__play');
-  var video = about.querySelector('.video video');
-  var videoBody = about.querySelector('.video');
-  play.addEventListener('click', function () {
-    video.play();
-    video.setAttribute('controls', 'controls');
-    play.classList.add('video__play--hidden');
-    videoBody.classList.remove('video--visible');
+  var play = document.querySelectorAll('.video__play');
+  play.forEach(function (item) {
+    item.addEventListener('click', function () {
+      item.previousElementSibling.play();
+      item.previousElementSibling.setAttribute('controls', 'controls');
+      this.classList.add('video__play--hidden');
+      item.parentNode.classList.remove('video--visible');
+    });
   });
 }
 
@@ -13751,3 +13768,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
+//# sourceMappingURL=main.js.map
