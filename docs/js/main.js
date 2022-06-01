@@ -204,18 +204,18 @@ tab(download_more2, hidden_list2, icon_more2, more_text2, "развернуть 
   \**********************************/
 /***/ (() => {
 
-var center = [56.351167678577426, 43.79961920550283];
+var center = [56.351157596715126, 43.799450854492186];
 
 function init() {
   var map = new ymaps.Map('map', {
     center: center,
-    zoom: 17
+    zoom: 16
   });
-  var placemark = new ymaps.Placemark([56.351295757355246, 43.799565561322545], {}, {
+  var placemark = new ymaps.Placemark(center, {}, {
     iconLayout: 'default#image',
     iconImageHref: './img/marker.svg',
     iconImageSize: [62, 88],
-    iconImageOffset: [0, 0]
+    iconImageOffset: [-25, -85]
   });
   map.controls.remove('geolocationControl'); // удаляем геолокацию
 
@@ -13768,4 +13768,3 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map
